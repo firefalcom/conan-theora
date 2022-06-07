@@ -77,7 +77,7 @@ class TheoraConan(ConanFile):
         cmake.build()
 
     def package(self):
-        self.copy("*.h", dst="include")
+        self.copy("include/theora/*.h", dst="include/theora", src=self._source_subfolder, keep_path=False)
         self.copy("*.a", dst="lib", keep_path=False)
         self.copy("*.lib", dst="lib", keep_path=False)
 
