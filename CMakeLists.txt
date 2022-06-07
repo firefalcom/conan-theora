@@ -14,3 +14,5 @@ add_library(theora STATIC "${THEORA_SRC_DIR}/lib/apiwrapper.c"
 	"${THEORA_SRC_DIR}/lib/decapiwrapper.c" "${THEORA_SRC_DIR}/lib/decinfo.c"
 	"${THEORA_SRC_DIR}/lib/decode.c" "${THEORA_SRC_DIR}/lib/huffdec.c")
 
+target_include_directories(theora PUBLIC "${THEORA_SRC_DIR}/include")
+
