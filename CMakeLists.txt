@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.4)
 project(theora)
 
+include(conanbuildinfo.cmake)
+conan_basic_setup()
+
 set(THEORA_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/source_subfolder)
 
 add_library(theora STATIC "${THEORA_SRC_DIR}/lib/apiwrapper.c"
